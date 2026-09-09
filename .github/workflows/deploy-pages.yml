@@ -38,6 +38,9 @@ jobs:
       - name: Build frontend application
         working-directory: frontend
         run: npm run build
+        env:
+          VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL || 'https://factlens-backend.onrender.com' }}
+
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

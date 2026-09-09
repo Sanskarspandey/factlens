@@ -3,8 +3,9 @@
 > **Evidence-grounded cross-document fact intelligence**  
 > *"Don't just extract facts. Verify them."*
 
-🌐 **Live Frontend Demo**: [https://sanskarspandey.github.io/factlens/](https://sanskarspandey.github.io/factlens/)  
-*(Note: GitHub Pages hosts the frontend/static UI demo. The full end-to-end extraction and reconciliation engine runs via the local FastAPI backend.)*
+- 🌐 **Live Demo**: [https://sanskarspandey.github.io/factlens/](https://sanskarspandey.github.io/factlens/)
+- 🏗️ **Architecture**: React 18 / TypeScript Frontend (GitHub Pages) ──► FastAPI REST Backend (Render / Local Python 3.10+) ──► SQLite + ChromaDB Vector Layer
+
 
 ---
 
@@ -393,11 +394,13 @@ Expected output:
 
 ## 23. Limitations & Engineering Trade-offs
 
+- **Cloud Hosting & Ephemeral Filesystem**: On free-tier cloud hosting (e.g. Render), instances sleep after inactivity and have ephemeral disk storage. If the instance restarts, click **"Reset & Seed Demo Fixtures"** or **"Run Evaluation"** on the dashboard to immediately repopulate SQLite and ChromaDB in-memory/on disk.
 - **Text-Based PDFs**: PyMuPDF extraction requires digital text streams; scanned images require an OCR pre-processor.
 - **Currency Isolation**: FactLens maintains currency isolation ($100 $\neq$ ₹100) and does not perform unverified spot FX conversions.
 - **Deterministic Rules vs End-to-End LLM**: FactLens prioritizes deterministic arithmetic and context rules over LLM-generated summaries to ensure 100% auditability and zero hallucinated reconciliations.
 - **Local Embeddings**: Uses `all-MiniLM-L6-v2` locally to ensure offline usability and complete data privacy.
 - **Complex Multi-Table Visual Spanning**: Borderless multi-page tables rely on block-order parsing.
+
 
 ---
 
