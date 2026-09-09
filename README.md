@@ -168,7 +168,7 @@ For every reconciled pair, the system generates an auditable, step-by-step diagn
 
 #### Case 1: Corroboration
 ```text
-✓ Same entity: Tata Motors
+✓ Same entity: Delhivery
 ✓ Same metric: Revenue from Operations
 ✓ Same fiscal period: FY2024
 ✓ Same reporting scope: Consolidated
@@ -180,8 +180,9 @@ For every reconciled pair, the system generates an auditable, step-by-step diagn
 
 #### Case 2: Contradiction
 ```text
-✓ Same entity: Tata Motors
+✓ Same entity: Delhivery
 ✓ Same metric: Total Employees / Headcount
+
 ✓ Same fiscal period: FY2024
 ✓ Same reporting scope: Consolidated
 ✓ Compatible units: Count

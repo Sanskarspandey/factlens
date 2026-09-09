@@ -73,7 +73,8 @@ FactLens strictly avoids asking an LLM to decide whether numbers match. Reconcil
 
 | Case | Scenario | Fact A | Fact B | Expected | Actual Result | Status |
 |---|---|---|---|---|---|---|
-| **Case 1** | Grounded Corroboration | Revenue ₹8,142 Cr (Tata Motors AR P.12) | Revenue ₹81.42 B (Tata Motors Inv Deck P.5) | `CORROBORATED` | `CORROBORATED` ($\Delta = 0.00\%$) | **PASS** |
+| **Case 1** | Grounded Corroboration | Revenue ₹8,142 Cr (Delhivery AR P.12) | Revenue ₹81.42 B (Delhivery Inv Deck P.5) | `CORROBORATED` | `CORROBORATED` ($\Delta = 0.00\%$) | **PASS** |
+
 | **Case 2** | Genuine Contradiction | Headcount 32,500 (Annual Report P.18) | Headcount 24,000 (Investor Deck P.22) | `CONTRADICTED` | `CONTRADICTED` ($\Delta = 26.15\%$) | **PASS** `[Demo Fixture]` |
 | **Case 3** | Contextual Difference | EBITDA ₹127 Cr (Consolidated) | EBITDA ₹95 Cr (Standalone) | `CONTEXTUALLY_DIFFERENT` | `CONTEXTUALLY_DIFFERENT` (Scope mismatch) | **PASS** |
 | **Case 4** | Preserved Uncertainty | Projected volume 800M (Forecast claim) | Ambiguous / unquantified target | `UNCERTAIN` | `UNCERTAIN` (Status mismatch / ungrounded) | **PASS** |
