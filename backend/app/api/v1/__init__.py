@@ -1,0 +1,4 @@
+"""API v1 root package."""
+from app.api.v1.router import api_router
+
+__all__ = ["api_router"]
